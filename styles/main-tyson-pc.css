@@ -1,0 +1,318 @@
+	/*
+		Ty K. Beats Home Page Stylesheet ( Final Term Project )
+		Filename:			main.css
+		Supporting Files:	index.html
+							albums.html
+							singles.html
+							featured.html
+		Author:				Tyson Koopman-Baker
+		Date:				11/16/2025
+	*/
+/* custom property */
+:root {
+	--global-color-white: #ffffff;
+	--global-color-black: #000000;
+	--global-color-sky-blue: #2aa8db;
+	--global-color-blue: #0000FE;
+	--global-color-pink: #ff5ce9;
+	--global-color-tomato: #fe6139;
+	--global-color-green: #36701e;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background: var(--global-color-black) url("../images/tree.jpeg") no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+body {
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+	color: var(--global-color-white);
+	position: relative;
+}
+/* General anchor pseudo-classes */
+
+a:link, a:visited {
+	text-decoration: none;
+	color: var(--global-color-white);
+}
+a:focus, a:hover {
+	font-style: italic;
+	font-size: 100%;
+	color: var(--global-color-sky-blue);
+}
+/* Plain element selectors*/
+h2, h3, h4 {
+	text-align: center;
+}
+p {
+	line-height: 115%;
+}
+p:first-letter {
+	font-size: 180%;
+}
+img#logo_left {
+	height: 4em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 20px;
+}
+img#logo_right {
+	height: 4em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 20px;
+}
+/* Header elements */
+header, nav, main, aside, footer {
+	background-color: rgba(0, 0, 0, .955);
+	border-radius: 20px;
+}
+header {
+	margin: 1em 0;
+}
+header h1 {
+	text-align: center;
+	font-size: 260%;
+	text-shadow: -4px -3px 3px var(--global-color-blue);
+	letter-spacing: .05em;
+	padding: .2em 0;
+	margin: 0;
+}
+/* Nav bar elements */
+nav {
+	display: flow-root;
+}
+nav ul {
+	list-style-type: none;
+}
+nav ul li {
+	background-color: var(--global-color-black);
+	border-radius: 20px;
+	width: 25%;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+}
+nav ul li a {
+	display: block;
+	padding: 1em 0;
+}
+nav ul li#current {
+	background-color: var(--global-color-green);
+	border-radius: 20px;
+}
+/* Main elements */
+main {
+	width: 65%;
+	float: left;
+	margin: 1em 0;
+	padding: 2em;
+}
+main h2 {
+	padding: 1em 0;
+	border-top: 3px solid var(--global-color-pink);
+	border-bottom: 3px solid var(--global-color-pink);
+	font-size: 180%;
+}
+main h3 {
+	margin: 1em 0;
+	font-size: 160%;
+}
+main img {
+	float: left;
+	display: block;
+	margin: 0 1em 0 0;
+	width: 60%;
+	max-width: 220px;
+	border: 3px solid var(--global-color-sky-blue);
+}
+main p {
+	border-left: 3px solid var(--global-color-sky-blue);
+	border-right: 3px solid var(--global-color-sky-blue);
+	padding: .5em 1em;
+	font-family: Courier New, Courier, monospace;
+	font-weight: bold;
+}
+main p:first-letter {
+	font-weight: bold;
+	color: var(--global-color-sky-blue);
+	letter-spacing: .02em;
+}
+main p:first-of-type {
+	padding-top: 1em;
+	border-top: 3px solid var(--global-color-sky-blue);
+}
+main p:last-of-type {
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+	border-bottom: 3px solid var(--global-color-sky-blue);
+}
+main h4 {
+	margin: 1em;
+	font-size: 125%;
+}
+main section {
+	display: flex;
+	justify-content: space-between;
+}
+main section article {
+	 width: 50%
+}
+main iframe {
+	display: block;
+	margin: 1em auto;
+	width: 60%;
+	height: 8em;
+	border: 3px solid var(--global-color-sky-blue);
+}
+main iframe#youtube {
+	height: 12em;
+}
+main~aside ul {
+	text-align: center;
+	list-style-type: none;
+	margin: 1em 0;
+	position: relative;
+}
+main~aside ul li {
+	padding: 1em 0;
+	border-bottom: 3px solid var(--global-color-sky-blue);
+}
+main~aside ul li:first-of-type {
+	border-top: 3px solid var(--global-color-sky-blue);
+}
+main~aside ul li img {
+	margin: 0 auto;
+	width: 40%;
+	border: none;
+}
+/* Aside elements */
+aside {
+	float: right;
+	width: 20%;
+	padding: 1em;
+	margin-top: 1em;
+	position: sticky;
+	top: 0;
+}
+aside h2 {
+	font-size: 140%;
+	margin: .5em 0;
+	padding: .5em 0;
+	border-top: 3px solid var(--global-color-pink);
+	border-bottom: 3px solid var(--global-color-pink);
+}
+aside h3 {
+	font-size: 120%;
+	margin: .5em 0;
+	padding: .5em 0;
+}
+aside img {
+	display: block;
+	margin: 1em auto;
+	width: 60%;
+	max-width: 250px;
+	border: 3px solid var(--global-color-sky-blue);
+}
+/* Music page main and aside elements */
+main#music {
+	float: right;
+}
+main#music img {
+	border: 3px solid var(--global-color-sky-blue);
+	float: none;
+	margin: auto;
+}
+main#music section article img {
+	margin: 1.5em auto;
+}
+main#music p {
+	margin: 1em;
+}
+main#music p:first-letter {
+	font-size: 160%;
+}
+main#music~aside {
+	float: left;
+}
+main#music~aside h3 {
+	margin: 0;
+	padding: 1em 0;
+	border-top: 3px solid var(--global-color-sky-blue);
+}
+main#music~aside h3:last-of-type {
+	margin-bottom: .5em;
+	border-bottom: 3px solid var(--global-color-sky-blue);
+}
+/* Footer elements */
+footer {
+	clear: both;
+	margin: .5em auto;
+	width: 15%;
+	padding: .5em;
+	border: 3px solid var(--global-color-sky-blue);
+}
+footer p {
+	text-align: center;
+	font-size: 80%;
+}
+/* Media queries */
+@media only screen and (max-width: 930px) {
+	footer { width: 20%; }
+	main h4 { 	font-size: 110%; }
+}
+@media only screen and (max-width: 720px) {
+	body, header, nav { font-size: 95%; }
+	img#logo_left, img#logo_right { height: 3.75em; }
+	main { float: none; width: 90%; padding: 5%}
+	main h4 { 	font-size: 130%; }
+	main img { width: 40%;}
+	main section { display: block; }
+	main section article { width: 100%; }
+	main section article iframe { width: 60%; height: 12em; }
+	aside { float: none; width: 90%; padding: 5%; position: static; display: flow-root; }
+	aside div { width: 45%; margin: 0 2.5%; float: left; }
+	main#music section { width: 80%; margin: auto; }
+	main#music~aside ul, main#about~aside ul { width: 100%; margin: 0 auto; display: flow-root; }
+	main#music~aside ul li, main#about~aside ul li { width: 50%; float: left; border: none; }
+	main#music~aside ul li:first-of-type, main#about~aside ul li:first-of-type { border: none; }main#music~aside ul { width: 100%; margin: 0 auto; display: flow-root; }
+}
+@media only screen and (max-width: 670px) {
+	footer { width: 25%; }
+}
+@media only screen and (max-width: 650px) {
+	body, header, nav { font-size: 90%; }
+	img#logo_left, img#logo_right { height: 3.55em; }
+	main section article iframe { height: 11em; }
+}
+@media only screen and (max-width: 570px) {
+	body, header, nav { font-size: 85%; }
+	img#logo_left, img#logo_right { height: 3.5em; }
+}
+@media only screen and (max-width: 520px) {
+	body, header, nav { font-size: 80%; }
+	img#logo_left, img#logo_right { height: 3.3em; }
+	main section article iframe { height: 10em; }
+}
+@media only screen and (max-width: 460px) {
+	body, header, nav { font-size: 75%; }
+	img#logo_left, img#logo_right { height: 3em; }
+	main section article iframe { width: 75%; height: 11em; }
+}
+@media only screen and (max-width: 420px) {
+	footer { width: 30%; }
+}
+@media only screen and (max-width: 400px) {
+	body, header, nav { font-size: 70%; }
+	img#logo_left, img#logo_right { height: 2.75em; }
+	main section article iframe { width: 85%; height: 11em; }
+}
