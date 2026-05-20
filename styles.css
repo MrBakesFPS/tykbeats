@@ -1012,8 +1012,7 @@ footer .footer-mark {
 
 /* track row stagger */
 .track {
-  opacity: 0;
-  animation: trackIn 0.6s ease forwards;
+  animation: trackIn 0.6s ease backwards;
 }
 .track:nth-child(1) { animation-delay: 0.05s; }
 .track:nth-child(2) { animation-delay: 0.1s; }
@@ -1027,8 +1026,7 @@ footer .footer-mark {
 .track:nth-child(10) { animation-delay: 0.5s; }
 
 .single-card {
-  opacity: 0;
-  animation: trackIn 0.6s ease forwards;
+  animation: trackIn 0.6s ease backwards;
 }
 .single-card:nth-child(1) { animation-delay: 0.1s; }
 .single-card:nth-child(2) { animation-delay: 0.2s; }
